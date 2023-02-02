@@ -4,6 +4,9 @@
 .fntstyle{
     font-family: 'Courier New';
 }
-/* .bck_image{
-    background-image:url('../assets/bck1.png');
-} */
+.divcolor{
+    background-color: rgb(87, 83, 83);
+}
+ .bckimg{
+    background-image:url('../assets/download.jpg')
+} 

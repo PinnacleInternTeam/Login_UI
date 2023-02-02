@@ -1,15 +1,22 @@
 import { useState } from 'react'
-import Header from './components/Header'
-import Body from './components/Body'
-
+import Login from './components/Login'
+import '../src/css/mycss.css'
+import Home from '../src/components/Home'
+import Profile from './components/profile'
+import { LoginContext } from './contexts/logincontext'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [showprofile, setShowprofile] = useState(!true)
+  const [name, setName] = useState("")
+    const [userdet,setUserdet]=useState([])
   return (
     <div className="App">
-      {/* <Header/> */}
-      <Body/>
+      <LoginContext.Provider value={{name,userdet, setName, setShowprofile, setUserdet}}>
+      {
+      showprofile ? 
+     <Home/> : <Login/>
+      }
+      </LoginContext.Provider>
     </div>
   )
 }
